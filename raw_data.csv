@@ -1,9 +1,6 @@
-PID,text
-1,1.5 year
-2, 3 years and 2 months
-3,3.5 years 
-4,10 months
-5,30 months
-,
-,
-,
+PID,text,description
+1,1.5 year,"allergic to nuts medication yyy pale peach polar pine \n successful treatment zzz abc def ghi jkl mno pqr abc def ghi able abc abc def ghi abcabc aabbcc the abc abc cba pink abc pqrs tuvw xyz abc abc abc test abc abc"
+2,3 years and 2 months,"allergic to peanuts, any forms of nuts, fish \n medication xxx, yyy \n treatment zzz"
+3,3.5 yrs ,"allergic to fish, most seafood  \n medication yyy \n treatment zzz"
+4,10 months,"allergic to mustards \n medication yyy \n treatment"
+5,30 mns,"allergic to coco, sesame seeds \n medication xxx \n treatment yyy"

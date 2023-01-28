@@ -4,8 +4,8 @@ import pandas as pd
 """
 Use Regular Expression to extract the following information:
 1. Zip Code from the address information
-2. BMI value from the unstructured description text string
-3. phone number and email address from the text string 
+2. BMI values from the unstructured description text string
+3. phone numbers and email addresses from the text string 
 """
 
 # read test file 
@@ -15,12 +15,13 @@ df = pd.read_csv("test_data.csv")
 zipcode_pt = r'\d{5}'
 
 # string must precede with "bmi" to capture bmi value
-bmi_pt = r'(?<=bmi)(\D*)(\d{0,2}\.?\d{1}?)'
+bmi_pt = r'(?<=bmi)(\D*)(\d{0,2}\.?\d?)'
 
 # 10 digit phone number
 ph_pt = r'\(?\d{3}\)?\D?\d{3}\D?\d{4}'
 
 # extract email info - assume the domain name is up to 2-4 characters only
+# extract all email addresses
 email_pt = r'([a-zA-Z0-9_.-]+@[a-zA-Z0-9_.-]+\.[a-zA-Z.]{2,4})'
 
 for idx,row in df.iterrows():
@@ -43,4 +44,4 @@ for idx,row in df.iterrows():
     
 
 #write the parsed dataframe to a file
-df.to_excel("extracted_data.xlsx",index=False)
+df.to_excel("processed_test_data.xlsx",index=False)
